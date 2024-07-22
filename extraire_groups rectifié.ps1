@@ -1,0 +1,1 @@
+﻿Get-ADGroup -Filter "*" | Out-File -FilePath C:\exportgroupAd.txt

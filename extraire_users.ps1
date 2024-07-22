@@ -1,0 +1,1 @@
+﻿Get-ADUser | Out-file -FilePath C:\exportuser.txt
