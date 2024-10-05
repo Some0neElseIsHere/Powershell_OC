@@ -1,6 +1,5 @@
 ﻿###
 ### Version 1.0
-### Auteur: FOURGOUS Alexandre
 ###
 
 ##
