@@ -1,16 +1,15 @@
 ###
-### Version 1.0  (avec les corrections)                  
-### Auteur: FOURGOUS Alexandre     
+### Version 1.0  (avec les corrections)                    
 ###                                
 ### Lister les membres d'un groupe
 ###
 # Pour lancer la cmd en PS, exemple:  & C:\Scripts\Projet05_Fourgous_Script02.ps1 -group GG_direction
 
 param (
-    #Information à définir pour la fonction ListerMembredGroup
+    #Information Ã  dÃ©finir pour la fonction ListerMembredGroup
     [parameter(Mandatory=$true)][string] $group = "", #obligation de fournir cette information
     [string] $fileout = "E:\script02-out.txt", #destination de la liste
-    #Information à définir pour la fonction TraceLog
+    #Information Ã  dÃ©finir pour la fonction TraceLog
     [string] $logPath = "C:\log.txt", # destination du fichier de log en cas d erreur
     [string] $script = "Script 2",
     [string] $level = "Error" # a definir en fonction de la criticite de son utilisation
@@ -18,12 +17,12 @@ param (
 
 function ListerMembredGroup($groupname)
 {   Try
-	{	# Test de la commande sans créer le fichier en cas d'erreur. Sinon un fichier vide se créerai
+	{	# Test de la commande sans crÃ©er le fichier en cas d'erreur. Sinon un fichier vide se crÃ©erai
         $list = Get-ADGroupMember $groupname | Select name
         # Sans erreur, on affiche la liste, et on l'envoie dans le fichier defini
         Write-Output $list | Out-file -FilePath $fileout
         TraceLog "INFO" "Les membres du groupe $groupname ont ete listes"
-        Write-Host "Les membres du groupe"$groupname "ont ete listes a l'adresse suivante:" $fileout
+        Write-Host "Les membres du groupe"$groupname "ont ete listes aÂ l'adresse suivante:" $fileout
 	}
 	Catch
 	{	#Renvoie de l'erreur
@@ -37,7 +36,7 @@ function ListerMembredGroup($groupname)
 # Fonction TraceLog: Trace le fonctionnement du script
 #
 # Param string $level niveau de la trace: [trace|debug|info|warn|error|critical|fatal][message]
-# Param string $msg message à tracer.
+# Param string $msg message Ã  tracer.
 #
 function TraceLog($level, $msg)
 {	$level = $level.ToUpper()
