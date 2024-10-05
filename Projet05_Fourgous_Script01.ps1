@@ -1,6 +1,5 @@
 ﻿###
-### Version 1.0  (avec les corrections)                  
-### Auteur: FOURGOUS Alexandre     
+### Version 1.0  (avec les corrections)                   
 ###                                
 ### CREATION D'UN UTILISATEUR + REPERTOIRE PARTAGE
 ###
